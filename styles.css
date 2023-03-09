@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: rgb(17, 17, 18);
+  color: white;
+}
+
+.glow {
+  font-size: 3rem;
+  padding: 2rem;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-gradient 1s linear infinite;
+}
+
+@keyframes text-gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+.coming-soon {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
+}
+
+img {
+  width: 30%;
+  height: 50vh;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .glow {
+    font-size: 1.92rem;
+    /* padding: 2rem; */
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    padding: 2rem;
+  }
+}
